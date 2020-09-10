@@ -1,0 +1,22 @@
+{
+"compilerOptions": {
+"allowJs": true,
+"typeRoots": ["./lib/typings.d.ts", "node_modules/@types/"],
+"allowSyntheticDefaultImports": true,
+"esModuleInterop": true,
+//TODO: DELETE THAT WHEN WE WILL USE REAL API REQUESTS
+"resolveJsonModule": true,
+"jsx": "react",
+"module": "commonjs",
+"noImplicitAny": true,
+"outDir": "./dist/",
+"preserveConstEnums": true,
+"removeComments": false,
+"sourceMap": true,
+"target": "es6",
+"lib": ["es2017", "dom"]},
+"include": [
+"./lib/**/**/*",
+"./__tests__/**/**/*"
+]
+}
