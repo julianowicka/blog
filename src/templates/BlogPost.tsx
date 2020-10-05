@@ -4,27 +4,35 @@ import {IBlogPostData, IContentfulBlogPost} from "../model/templates/blogPostInt
 
 
 const BlogPost = ( {data}: {data: IBlogPostData} ) => {
- // TODO: fix interface
+    // TODO: fix interface
 // @ts-ignore
-const {contentfulBlogPost}: IContentfulBlogPost = data
- console.log(contentfulBlogPost)
+
+    // @ts-ignore
+    const {contentfulBlogPost}: IContentfulBlogPost = data
+   // console.log(contentfulBlogPost)
     const {body} = contentfulBlogPost.body
-    console.log(body)
+   // console.log(body)
     const {description} = contentfulBlogPost.description
     const {publishDate} = contentfulBlogPost
     const {slug} = contentfulBlogPost
     const {title} = contentfulBlogPost
-
-    return(
+    const {artwork} = contentfulBlogPost
+   // console.log(artwork)
+    const imageStyles = {
+        width: 100,
+        height: 100
+    }
+    return (
         <div>
+            {title}
             {description}
             {publishDate}
             {slug}
-            {title}
+           <img style = {imageStyles} src={artwork.file.url}/>
+
         </div>
     )
 }
-
 export default BlogPost
 
 export const blogPostQuery = graphql`
@@ -32,6 +40,12 @@ export const blogPostQuery = graphql`
   contentfulBlogPost(slug: {eq: $slug}) {              
     title
     slug
+    artwork {
+    file {
+        url
+        fileName                        
+           }
+    }
     description {
     description        
     }
