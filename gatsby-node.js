@@ -13,6 +13,13 @@ exports.createPages = async ({graphql, actions}) =>
                   node{
                     title
                     slug
+                    artwork {
+                          file {
+                            url
+                            fileName
+                            
+                          }
+                        }
                     description {
                       description        
                     }
