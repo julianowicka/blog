@@ -4,7 +4,7 @@
 //     })
 // })
 describe('ETS', () => {
-    test('it tests', () => {
-        expect(true).toBe(true)
-    })
+  test('it tests', () => {
+    expect(true).toBe(true)
+  })
 })

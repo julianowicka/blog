@@ -1,5 +1,4 @@
 
-
 export interface IContentfulBlogPost{
     body: {
         body: string
