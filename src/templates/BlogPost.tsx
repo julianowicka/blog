@@ -5,7 +5,7 @@ import { IBlogPostData, IContentfulBlogPost } from '../model/templates/blogPostI
 const BlogPost = ({ data }: {data: IBlogPostData}) => {
   // TODO: fix interface
 // @ts-ignore
-
+  console.log({ data })
   // @ts-ignore
   const { contentfulBlogPost }: IContentfulBlogPost = data
   // console.log(contentfulBlogPost)
@@ -22,7 +22,8 @@ const BlogPost = ({ data }: {data: IBlogPostData}) => {
     height: 100
   }
   return (
-    <div className='container'>
+
+    <div data-testid='blog-post' className='container'>
       {title}
       {description}
       {publishDate}
