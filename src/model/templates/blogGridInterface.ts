@@ -1,10 +1,10 @@
 import { IContentfulBlogPost } from './blogPostInterface'
 
-interface IBlogPostNode {
+export interface IBlogPostNode {
     node: IContentfulBlogPost
 }
 export interface IBlogPostGridData {
-    allContentfulBlogpPost:{
+    allContentfulBlogPost:{
         edges: IBlogPostNode[]
     }
 }
